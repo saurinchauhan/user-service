@@ -1,0 +1,12 @@
+test run
+	docker run hello-world
+
+run ubuntu bash
+	docker run -it ubuntu bash
+	
+run webserver on docker
+	docker run -d -p 80:80 --name webserver nginx
+	
+	
+	
+	docker run -it java-app bash

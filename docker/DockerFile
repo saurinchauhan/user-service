@@ -1,0 +1,19 @@
+# Pull base image.
+FROM	ubuntu:16.04
+
+# Install Java.
+FROM	java:8
+
+# Define working directory.
+WORKDIR /data
+
+# Define commonly used JAVA_HOME variable
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+
+ADD	user-service-0.0.1-SNAPSHOT.jar data/user-service-0.0.1-SNAPSHOT.jar
+
+EXPOSE 8300
+
+# Define default command.
+CMD	java -jar data/user-service-0.0.1-SNAPSHOT.jar
+
